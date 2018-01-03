@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="http://mayflower.digital.mass.gov/assets/css/index-generated.css?1508177393">
+  <link rel="stylesheet" href="http://mayflower.digital.mass.gov/assets/css/base-theme-generated.css?1508177393">
+
+
+  <link rel="stylesheet" href="http://mayflower.digital.mass.gov/assets/css/gov-theme-generated.css">
+  <link rel="stylesheet" href="http://mayflower.digital.mass.gov/assets/css/pattern-scaffolding-generated.css?1508177393">
+  <link rel="stylesheet" href="http://mayflower.digital.mass.gov/assets/css/index-generated.css?1508177393">
+  <link rel="stylesheet" href="http://mayflower.digital.mass.gov/assets/css/base-theme-generated.css?1508177393">
+
+  <!--
+
+  <link rel="stylesheet" href="./styles/style1.css">
+  <link rel="stylesheet" href="/styles/style2.css">
+  <link rel="stylesheet" href="/styles/style3.css">
+  <link rel="stylesheet" href="/styles/style4.css">
+  <link rel="stylesheet" href="/styles/style5.css">
+  <link rel="stylesheet" href="/styles/style6.css">
+-->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+
+  <script type="text/javascript">
+   if (location.protocol === 'https:')
+   {
+     location.href = 'http:' + window.location.href.substring(window.location.protocol.length);
+   }
+
+  function redirect(url) {
+    window.location=url;
+  }
+  </script>
+
+  <script src="./front-end/calculate.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+  <div class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false" data-show="false">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Disclaimer</h2>
+        </div>
+        <div class="modal-body">
+          The Massachusetts State Employees' Retirement System is not bound by estimates given by this estimate calculator.
+
+The information and/or calculations displayed on this site do not necessarily reflect the actual amount of a member's retirement allowance. The results provided by this calculator are approximations and should not be considered as the final determination of a member's retirement benefit. They should not be relied upon for planning purposes.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="ma__button ma__button--small" data-dismiss="modal">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    $('#disclaimerModal').modal('toggle')
+  </script>
+
+
+
+
+  <main class="ma__form-page" id="main-content" tabindex="-1">
+    <div class="pre-content">
+
+
+      <section class="ma__page-header ">
+        <div class="ma__page-header__content">
+          <h1 class="ma__page-header__title">MSRB Pension Estimator</h1>
+          <div class="ma__page-header__sub-title">For Members of the Massachusetts State Employees' Retirement System</div>
+        </div>
+
+      </section>
+    </div>
+    <div class="main-content main-content--two">
+      <div class="page-content">
+
+        <form class="ma__form-page" action="#" id="serviceForm">
+          <div class="ma__error-list js-error-list" tabindex="-1">
+            <div class="ma__error-list__container">
+              <div class="ma__error-list__header">
+                <span class="ma__error-list__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#cd0d0d" d="M0 12a12.01 12.01 0 0 0 24 0 12.01 12.01 0 0 0-24 0zm12 7.85a.93.93 0 0 1-.92-.93V18a.92.92 0 1 1 1.85 0v.92c0 .51-.42.93-.93.93zm0-4.7a.92.92 0 0 1-.92-.92V5.08c0-.51.41-.93.92-.93s.92.42.92.93v9.15c0 .51-.41.92-.92.92z"/></svg>
+                </span>
+                <span class="ma__error-list__title">
+                  Sorry, please correct the indicated errors
+                </span>
+              </div>
+              <ul class="ma__error-list__messages">
+                <li class="ma__error-list__message">
+                  <label class="ma__error-list__label" for="your-name-23489" aria-label="">Please fill in the first field</label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+
+
+
+
+
+          <h2
+          class="ma__comp-heading   "
+
+          tabindex="-1">Service Information</h2>
+
+<div class="form-group">
+  <p> Did you begin service before April 2, 2012?</p>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="serviceDate" id="ServiceDateBefore" value="yes"> Yes
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label active">
+      <input class="form-check-input" type="radio" name="serviceDate" id="serviceDateAfter" value="no"> No
+    </label>
+  </div>
+</div>
+
+<div class="form-group">
+  <label for="dob">Date of birth:</label>
+  <input type="date" class="form-control col-md-5" id="dob" required>
+</div>
+
+<div class="form-group">
+  <label for="ret-date">Date of retirement (end of service):</label>
+  <input type="date" class="form-control col-md-5" id="ret-date" required>
+</div>
+
+<div class = "form-group">
+<p>Group number (hover for description):</p>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="groupRadio" id="group1" value="group1"> <div title="Officials and general employees">Group 1</div>
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="groupRadio" id="group2" value="group2"> <div title="Probation officers, court officers, certain correctional positions whose major duties require them to have the care, custody, instruction or supervision of prisoners, and certain positions who provide direct care, custody, instruction or supervision of persons
+with mental illness or developmental disabilities">Group 2</div>
+  </label>
+</div>
+<div class="form-check disabled form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="groupRadio" id="group3" value="group3" disabled>
+    <div title="Police officers">Group 3</div>
+  </label>
+</div>
+<div class="form-check form-check-inline">
+  <label class="form-check-label">
+    <input class="form-check-input" type="radio" name="groupRadio" id="group4" value="group4"> <div title="Certain public safety officers and officials, correction officers and certain other correction positions, and parole officers or parole supervisors">Group 4</div>
+  </label>
+</div>
+</div>
+
+<div class="form-group">
+  <p>Are you a veteran?</p>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label">
+      <input class="form-check-input" type="radio" name="veteranRadio" id="veteranYes" value="yes"> Yes
+    </label>
+  </div>
+  <div class="form-check form-check-inline">
+    <label class="form-check-label active">
+      <input class="form-check-input" type="radio" name="veteranRadio" id="veteranNo" value="no"> No
+    </label>
+  </div>
+</div>
+
+
+<fieldset class="form-group row disabled">
+  <legend class="col-form-legend col-md-12">Select total years/months of creditable service:</legend>
+  <div class="row ml-1">
+    <div class="form-group inline col-md-4 disabled">
+      <input class="form-control disabled" type="number" placeholder="years" id="service-years">
+    </div>
+    <div class="form-group inline col-md-4 disabled">
+      <input class="form-control disabled" type="number" placeholder="months" id="service-months">
+    </div>
+  </div>
+</fieldset>
+
+<div class="form-group">
+  <label for="salary">Enter the estimated average of your highest <span class="font-weight-bold" id="months-of-salary">36</span> consecutive months of annual compensation:</label>
+  <div class="input-group">
+    <div class="input-group-addon">$</div>
+    <input class="form-control col-md-4" type="number" class="form-control" id="salary" required>
+  </div>
+</div>
+
+<div class="form group">
+  <label for="beneficiary">(Optional) Date of birth for your beneficiary:</label>
+  <input class="form-control col-md-5" id="beneficiary" type="date">
+</div>
+
+
+  <!-- onclick="redirect('./resultspage.html'); console.log('redir'); -->
+<fieldset>
+  <input type="button" type="submit" id="calculate-btn" class="ma__button ma__button--small  " aria-label="" value="Calculate">
+</fieldset>
+</form>
+
+
+<h4>Estimated Allowances:</h4>
+<!-- TABLE TO DISPLAY OUTPUT OF CALCULATOR -->
+<table class="table table-hover table-striped table-bordered">
+  <caption>Estimated annual allowances</caption>
+  <thead>
+    <tr>
+      <th scope="col">Option</th>
+      <th scope="col">Annual</th>
+      <th scope="col">Monthly</th>
+      <th scope="col">Beneficiary Annual</th>
+      <th scope="col">Beneficiary Monthly</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">A</th>
+      <td id="a_annual">-</td>
+      <td id="a_monthly">-</td>
+      <td class="text-center" colspan="2">N/A</td>
+    </tr>
+    <tr>
+      <th scope="row">B</th>
+      <td id="b_annual">-</td>
+      <td id="b_monthly">-</td>
+      <td class="text-center" colspan="2">(See below)</td>
+    </tr>
+    <tr>
+      <th scope="row">C</th>
+      <td id="c_annual">-</td>
+      <td id="c_monthly">-</td>
+      <td id="c_ben_annual">-</td>
+      <td id="c_ben_monthly">-</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>* Option B Beneficiary Allowance: Balance of Annuity Reserve Account, if any</p>
+
+<br>
+
+</div>
+<aside class="sidebar ">
+  <section class="ma__contact-list ">
+
+
+
+    <h2 class="ma__sidebar-heading">Contact</h2>
+
+
+
+    <section
+    class="ma__contact-us  ">
+
+
+    <h3 class="ma__column-heading">
+      Name of Agency or Organization
+    </h3>
+
+    <div class="ma__contact-us__content js-accordion-content">
+      <div class="ma__contact-group">
+        <h4 class="ma__contact-group__name">
+          <svg aria-hidden="true" id="SvgjsSvg1014" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="33" height="37" viewBox="0 0 33 37"><defs id="SvgjsDefs1015"></defs><path id="SvgjsPath1016" d="M412.841 2040.51C401.798 2045.57 384.657 2012.19 395.451 2006.56L398.60900000000004 2005L403.84400000000005 2015.23L400.72300000000007 2016.77C397.44200000000006 2018.54 404.27600000000007 2031.91 407.63200000000006 2030.28C407.7680000000001 2030.22 410.7150000000001 2028.77 410.72600000000006 2028.76L416.0040000000001 2038.96C415.9920000000001 2038.97 413.02200000000005 2040.43 412.84100000000007 2040.51ZM413.24 2011.28C415.564 2011.98 417.62600000000003 2013.56 418.87 2015.86C420.115 2018.1699999999998 420.309 2020.76 419.616 2023.09L416.926 2022.29C417.413 2020.6499999999999 417.275 2018.83 416.39799999999997 2017.2C415.52399999999994 2015.5800000000002 414.073 2014.47 412.436 2013.98ZM411.838 2016C412.956 2016.33 413.95000000000005 2017.1 414.548 2018.21C415.148 2019.32 415.242 2020.56 414.908 2021.69L410.535 2020.38ZM413.841 2009.26C416.681 2010.11 419.2 2012.04 420.722 2014.86C422.24199999999996 2017.6799999999998 422.479 2020.85 421.63399999999996 2023.6899999999998L424.39199999999994 2024.5199999999998C425.44899999999996 2020.9599999999998 425.15399999999994 2017.0099999999998 423.2509999999999 2013.4899999999998C421.3539999999999 2009.9699999999998 418.20899999999995 2007.5599999999997 414.66399999999993 2006.4999999999998Z " transform="matrix(1,0,0,1,-392,-2005)"></path></svg>      <span>Phone</span>
+        </h4>
+
+
+        <div class="ma__contact-group__item">
+          <span class="ma__contact-group__label">Main:</span>
+
+          <a
+          href="tel:+17817401605"
+          class="ma__content-link ma__content-link--phone">(781) 740-1605</a>
+
+        </div>
+      </div>
+      <div class="ma__contact-group">
+        <h4 class="ma__contact-group__name">
+          <svg aria-hidden="true" id="SvgjsSvg1011" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="36" height="30" viewBox="0 0 36 30"><defs id="SvgjsDefs1012"></defs><path id="SvgjsPath1013" d="M424 1674L394 1674L394 1693.5L424 1693.5ZM421 1690.5L397 1690.5L397 1677L421 1677ZM424 1695L394 1695L391 1704L427 1704ZM405.658 1702.5L406.357 1701L411.64300000000003 1701L412.34200000000004 1702.5Z " transform="matrix(1,0,0,1,-391,-1674)"></path></svg>      <span>Online</span>
+        </h4>
+
+
+        <div class="ma__contact-group__item">
+
+          <span class="ma__decorative-link">
+            <a
+            href="#"
+            class="js-clickable-link"
+            title="">email@state.ma.us&nbsp;<svg aria-hidden="true" id="SvgjsSvg1000" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="16" height="18" viewBox="0 0 16 18"><defs id="SvgjsDefs1001"></defs><path id="SvgjsPath1007" d="M983.721 1887.28L983.721 1887.28L986.423 1890L986.423 1890L986.423 1890L983.721 1892.72L983.721 1892.72L978.318 1898.17L975.617 1895.45L979.115 1891.92L971.443 1891.92L971.443 1888.0700000000002L979.103 1888.0700000000002L975.617 1884.5500000000002L978.318 1881.8300000000002Z " transform="matrix(1,0,0,1,-971,-1881)"></path></svg></a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<section class="ma__placeholder" style="color:#bbb;min-height:200px;border:4px dashed #ddd;font-size:2rem;line-height:200px;text-align:center;">
+  Sidebar
+</section>
+</aside>
+</div>
+
+</main>
+
+</body>
+</html>
